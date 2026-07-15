@@ -14,7 +14,7 @@ async def proxy(request: Request, path):
         auth_key = headers.get("authorization")
         if not auth_key:
             raise HTTPException(status_code=401, detail="Authorization key is required")
-        target_url = f"https://llm.galaxyfounded.nl/{path}"
+        target_url = f"http://89.47.113.13/{path}"
         async with aiohttp.ClientSession() as session:
             try:
                 async with session.request(
